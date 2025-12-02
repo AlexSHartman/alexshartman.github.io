@@ -1,0 +1,279 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   GLOBAL RESET
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   BODY - Simple grey background
+   ======================================== */
+body {
+    font-family: 'Inter', sans-serif;  /* Change to use different font */
+    background: #f5f5f5;
+    /* Change background color (grey/white/black) */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* ========================================
+   WRAPPER - Outer container
+   ======================================== */
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ========================================
+   CONTAINER - Flexbox layout for scaling
+   ======================================== */
+.container {
+    display: flex;
+    /* Use flexbox for flexible scaling */
+    flex-direction: row;
+    /* Horizontal layout (change to 'column' for vertical) */
+    max-width: 1200px;
+    /* Change this to adjust overall width */
+    width: 100%;
+    background: #ffffff;
+    /* Change container background color */
+    min-height: auto;
+    /* Change this to adjust minimum height */
+    border-radius: 24px;
+    /* Change to adjust corner roundness */
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    /* Shadow around container */
+}
+
+/* ========================================
+   HERO SECTION - Left side profile area (larger)
+   ======================================== */
+.hero-section {
+    flex: 1.5;
+    /* Takes 1.5x space (more than links) */
+    background: #000000;
+    /* Change background color */
+    padding: 60px 50px;
+    /* Change padding: top/bottom left/right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: left;
+    /* Change to 'center' for centered text */
+    width: 100%;
+    max-width: 400px;
+    /* Maximum width for content */
+}
+
+/* Profile image */
+.profile-image {
+    width: 130px;
+    /* Change to adjust image size */
+    height: 130px;
+    /* Keep same as width for circle */
+    border-radius: 50%;
+    /* Makes image circular */
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    /* Center horizontally with space below */
+    display: block;
+    /* Required for margin auto centering */
+    border: 4px solid #ffffff;
+    /* Change color/thickness for image border */
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    /* Subtle shadow */
+}
+
+/* Name heading */
+.hero-content h1 {
+    font-size: 2rem;
+    /* Change to adjust name size */
+    margin-bottom: 14px;
+    /* Space below name */
+    font-weight: 600;
+    /* Change 400-700 for font weight */
+    color: #ffffff;
+    /* Change to adjust name color (white) */
+    letter-spacing: -0.02em;
+}
+
+/* Bio description */
+.description {
+    font-size: 0.95rem;
+    /* Change to adjust description text size */
+    line-height: 1.6;
+    /* Change line spacing (1.5-2 recommended) */
+    color: #e0e0e0;
+    /* Change to adjust description color (light grey) */
+    font-weight: 400;
+}
+
+/* ========================================
+   LINKS SECTION - Right side links area (smaller)
+   ======================================== */
+.links-section {
+    flex: 1;
+    /* Takes 1x space (less than hero) */
+    padding: 50px 40px;
+    /* Change padding: top/bottom left/right */
+    background: #ffffff;
+    /* Change to adjust right section background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container {
+    width: 100%;
+    max-width: 380px;
+    /* Change to adjust links container width */
+}
+
+/* ========================================
+   LINK CARD - Individual link button
+   ======================================== */
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Space between icon and text */
+    background: #f5f5f5;
+    /* Change link background color (grey) */
+    padding: 14px 20px;
+    /* Change padding: top/bottom left/right */
+    margin-bottom: 10px;
+    /* Change space between link cards */
+    text-decoration: none;
+    color: #000000;
+    /* Change link text color (black) */
+    border: 2px solid #e0e0e0;
+    /* Change border color */
+    border-radius: 10px;
+    /* Change to adjust corner roundness (0 = square) */
+    transition: all 0.3s ease;
+    /* Smooth hover animation */
+    font-size: 0.95rem;
+    /* Change to adjust link text size */
+    font-weight: 500;
+    /* Change 400-700 for font weight */
+}
+
+/* Link hover effect */
+.link-card:hover {
+    background: #000000;
+    /* Change hover background (black) */
+    color: #ffffff;
+    /* Change hover text color (white) */
+    border-color: #000000;
+    /* Change hover border color */
+    transform: translateY(-2px);
+    /* Lift up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
+}
+
+/* Icon styling */
+.link-icon {
+    width: 20px;
+    /* Change to adjust icon size */
+    height: 20px;
+    /* Keep same as width */
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* Icon color change on hover */
+.link-card:hover .link-icon {
+    color: #ffffff;
+    /* Change hover icon color */
+    transform: scale(1.1);
+    /* Slightly enlarge icon on hover */
+}
+
+/* Link text label */
+.link-text {
+    flex: 1;
+    /* Takes remaining space */
+    font-size: 0.95rem;
+    /* Change to adjust text size */
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile layout
+   ======================================== */
+@media (max-width: 768px) {
+
+    .wrapper {
+        padding: 20px 10px;
+        /* Less padding on mobile */
+    }
+
+    /* Stack sections vertically on mobile */
+    .container {
+        flex-direction: column;
+        /* Change to vertical stacking */
+        max-width: 100%;
+        min-height: auto;
+        border-radius: 16px;
+        /* Smaller border radius on mobile */
+    }
+
+    /* Hero section mobile adjustments */
+    .hero-section {
+        flex: 1;
+        /* Equal flex on mobile */
+        padding: 50px 30px;
+        /* Reduce padding */
+    }
+
+    .hero-content {
+        text-align: center;
+        /* Center content on mobile */
+    }
+
+    .profile-image {
+        width: 120px;
+        /* Smaller image on mobile */
+        height: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+        /* Smaller name on mobile */
+    }
+
+    .description {
+        font-size: 0.95rem;
+        /* Smaller description on mobile */
+    }
+
+    /* Links section mobile adjustments */
+    .links-section {
+        flex: 1;
+        /* Equal flex on mobile */
+        padding: 50px 30px;
+        /* Reduce padding */
+    }
+
+    .link-card {
+        padding: 16px 20px;
+        /* Slightly smaller padding */
+    }
+}
